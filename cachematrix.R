@@ -17,10 +17,15 @@ makeCacheMatrix <- function(x = matrix()) {
   get <- function(solve) a <<- solve
   
   #set the value of the inverse
-  setinv <- function(solve) a <<- solve
+  setinv <- function(x){
+    a <<- solve(x)
+    return(a)
+  }
   
   #get the value of the inverse
-  getinv <- function() a
+  getinv <- function(){
+    return (a)
+  }
 
 }
 
